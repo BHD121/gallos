@@ -101,6 +101,11 @@ svg{ display:block; }
 .side-panel{ background: var(--panel); border:1px solid var(--border); border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-card); }
 .sidebar-close{ display:none; background: var(--panel); border:1px solid var(--border); color: var(--ink-soft); width:34px; height:34px; border-radius:50%; align-items:center; justify-content:center; margin: 0 0 14px auto; }
 .sidebar-close svg{ width:16px; height:16px; }
+.sidebar-backdrop{
+  position: fixed; inset:0; background: rgba(0,0,0,0.55); z-index:65;
+  opacity:0; pointer-events:none; transition: opacity .25s ease;
+}
+.sidebar-backdrop.open{ opacity:1; pointer-events:auto; }
 .side-section{ padding: 16px; border-bottom:1px solid var(--border); }
 .side-section:last-child{ border-bottom:none; }
 .side-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; padding: 0 4px; }
@@ -322,11 +327,6 @@ svg{ display:block; }
   .upcoming-grid{ grid-template-columns: repeat(2,1fr); }
 
   .sidebar-close{ display:flex; }
-  .sidebar-backdrop{
-    position: fixed; inset:0; background: rgba(0,0,0,0.55); z-index:65;
-    opacity:0; pointer-events:none; transition: opacity .25s ease;
-  }
-  .sidebar-backdrop.open{ opacity:1; pointer-events:auto; }
 
   .left-sidebar{
     position: fixed; top:0; left:0; bottom:0; width:280px; max-width:82vw; z-index:70;
